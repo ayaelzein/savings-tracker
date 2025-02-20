@@ -15,8 +15,12 @@ months = {"January" : "salary_per_jan",
 for month in months :
   print(month)
 
+
+selectedmonth = input("Please enter the selected month: ")
 salary_per_month = [months.values]
 print(salary_per_month)
+
+salary = int(input(f"Please enter your salary for {selectedmonth}: "))
 
 # outmonth = input("Please enter the selected month: ") 
 
