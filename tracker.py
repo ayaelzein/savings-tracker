@@ -42,6 +42,10 @@ if selectedmonth:
   print(f"The estimated cost of your yearly rent is {yearlyrent}")
   print(f"The estimated cost of your yearly electricity is {yearlyelect}")
 
+  salarytotwo = salary * salary
+
+  print(f"Nabiha's salary to the power of two is {salarytotwo}")
+
      
 
 #elif selectedmonth == "February":
