@@ -29,6 +29,8 @@ if selectedmonth:
   percentageofspent = (spent/100) * salary
   remainingsalary = salary - percentageofspent
 
+  print(f"Your spent total is {percentageofspent}")
+
   print(f"Your remaining salary for other expenses is {remainingsalary}")
      
 
