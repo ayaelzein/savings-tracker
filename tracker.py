@@ -35,6 +35,13 @@ if selectedmonth:
   calcsavings = (savings/100) * salary
   calcelectricity = (electricity/100) * salary
   calcrent = (rent/100) * salary
+
+  yearlyrent = calcrent * 12
+  yearlyelect = calcelectricity * 12 
+
+  print(f"The estimated cost of your yearly rent is {yearlyrent}")
+  print(f"The estimated cost of your yearly electricity is {yearlyelect}")
+
      
 
 #elif selectedmonth == "February":
