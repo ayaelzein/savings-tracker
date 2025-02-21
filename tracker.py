@@ -30,8 +30,11 @@ if selectedmonth:
   remainingsalary = salary - percentageofspent
 
   print(f"Your spent total is {percentageofspent}")
-
   print(f"Your remaining salary for other expenses is {remainingsalary}")
+
+  calcsavings = (savings/100) * salary
+  calcelectricity = (electricity/100) * salary
+  calcrent = (rent/100) * salary
      
 
 #elif selectedmonth == "February":
