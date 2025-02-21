@@ -25,11 +25,11 @@ if selectedmonth:
   electricity = int(input(f"Please enter the percentage that you've allocated for electricity in the {selectedmonth}: "))
   rent = int(input(f"Please enter the percentage that you've allocated for rent in the {selectedmonth}: "))
 
-  spent = savings + electricity + rent
-  percentageofspent = (spent/100) * salary
-  remainingsalary = salary - percentageofspent
+  spentperc = savings + electricity + rent
+  spent = (spentperc/100) * salary
+  remainingsalary = salary - spent
 
-  print(f"Your spent total is {percentageofspent}")
+  print(f"Your spent total is {spent}")
   print(f"Your remaining salary for other expenses is {remainingsalary}")
 
   calcsavings = (savings/100) * salary
@@ -45,6 +45,42 @@ if selectedmonth:
   salarytotwo = salary * salary
 
   print(f"Nabiha's salary to the power of two is {salarytotwo}")
+
+  remainingper = 100 - spentperc
+  additionalsavings = input("Are there any additional savings: (Yes or No)")
+  outsidesavings = input("Are these additions from your original salary: (Yes or No) ")
+
+  if additionalsavings == "Yes" and outsidesavings == "No" :
+
+    externaladdedsavings = int(input("How much are you adding: "))
+    totalsavings = externaladdedsavings + calcsavings
+
+    print(f"Your total savings for the month is {totalsavings}")
+
+  elif outsidesavings == "Yes" and remainingper < 100 and additionalsavings == "Yes":
+    
+    addsavesal = int(input("Please enter the additional amount: "))
+    totalsavings =  addsavesal + calcsavings
+    updatedremaining = remainingsalary - addsavesal
+    updatedpersal = savings*addsavesal/calcsavings
+
+    print(f"Your updated savings in percentage is {updatedpersal}")
+    print(f"Your updated reamining is {updatedremaining}")
+  
+  elif outsidesavings == "Yes" and remainingper == 100 and additionalsavings == "Yes":
+
+    print("You are unable to allocate more to your savings from your original salary.")
+
+  elif outsidesavings == "No" and remainingper < 100 and additionalsavings == "No":
+
+    print("Okay, have a nice day.")
+
+  elif additionalsavings == "No" and outsidesavings == "Yes":
+
+    print("You must've entered the wrong answer for the last question")
+
+
+
 
      
 
