@@ -14,58 +14,67 @@ months = {
           "December" : "salary_per_dec"
            }
 
-for month in months :
-
-  selectedmonth = input("Please enter the selected month: ")
-  salary = int(input(f"Please enter your salary for {selectedmonth}: "))
+selectedmonth = input("Please enter the selected month: ")
+#  salary = int(input(f"Please enter your salary for {selectedmonth}: "))
   
-  if selectedmonth == "January":
-     months["January"] = int(input(salary))
-     print(months.get("January"))
+if selectedmonth:
+  salary = int(input(f"Please enter your salary for {selectedmonth}: "))
+  months[selectedmonth] = salary
      
-  elif selectedmonth == "February":
-    months["February"]= int(input(salary))
-    print(months.get("February"))
+  savings = int(input(f"Please enter the percentage that you've allocated for savings in the {selectedmonth}: "))
+  electricity = int(input(f"Please enter the percentage that you've allocated for electricity in the {selectedmonth}: "))
+  rent = int(input(f"Please enter the percentage that you've allocated for rent in the {selectedmonth}: "))
 
-  elif selectedmonth == "March":
-    months["March"] =  int(input(salary))
-    print(months.get("March"))
+  spent = savings + electricity + rent
+  percentageofspent = (spent/100) * salary
+  remainingsalary = salary - percentageofspent
 
-  elif selectedmonth == "April":
-    months["April"] =  int(input(salary))
-    print(months.get("April"))
+  print(f"Your remaining salary for other expenses is {remainingsalary}")
+     
 
-  elif selectedmonth == "May":
-    months["May"] =  int(input(salary))
-    print(months.get("May"))
+#elif selectedmonth == "February":
+ #   months["February"]= int(input(salary))
+  #  print(months.get("February"))
 
-  elif selectedmonth == "June":
-    months["June"] =  int(input(salary))
-    print(months.get("June"))
+ # elif selectedmonth == "March":
+   # months["March"] =  int(input(salary))
+    #print(months.get("March"))
 
-  elif selectedmonth == "July":
-    months["July"] =  int(input(salary))
-    print(months.get("July"))
+ # elif selectedmonth == "April":
+   # months["April"] =  int(input(salary))
+   # print(months.get("April"))
 
-  elif selectedmonth == "August":
-    months["August"] =  int(input(salary))
-    print(months.get("August"))
+#  elif selectedmonth == "May":
+   # months["May"] =  int(input(salary))
+   # print(months.get("May"))
 
-  elif selectedmonth == "September":
-    months["September"] =  int(input(salary))
-    print(months.get("September"))
+ # elif selectedmonth == "June":
+   # months["June"] =  int(input(salary))
+   # print(months.get("June"))
 
-  elif selectedmonth == "November":
-    months["November"] =  int(input(salary))
-    print(months.get("November"))
+ # elif selectedmonth == "July":
+   # months["July"] =  int(input(salary))
+   # print(months.get("July"))
 
-  elif selectedmonth == "October":
-    months["October"] =  int(input(salary))
-    print(months.get("October"))
+ # elif selectedmonth == "August":
+   # months["August"] =  int(input(salary))
+   # print(months.get("August"))
 
-  elif selectedmonth == "December":
-    months["December"] =  int(input(salary))
-    print(months.get("December"))
+ # elif selectedmonth == "September":
+   # months["September"] =  int(input(salary))
+   # print(months.get("September"))
+
+ # elif selectedmonth == "November":
+   # months["November"] =  int(input(salary))
+   # print(months.get("November"))
+
+ # elif selectedmonth == "October":
+   # months["October"] =  int(input(salary))
+   # print(months.get("October"))
+
+ # elif selectedmonth == "December":
+  #  months["December"] =  int(input(salary))
+   # print(months.get("December"))
 
   #  print(months)
 
