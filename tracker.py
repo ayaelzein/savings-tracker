@@ -62,9 +62,9 @@ if selectedmonth:
     addsavesal = int(input("Please enter the additional amount: "))
     totalsavings =  addsavesal + calcsavings
     updatedremaining = remainingsalary - addsavesal
-    updatedpersal = savings*addsavesal/calcsavings
+    updatedpersavings = (savings*addsavesal/calcsavings) + savings
 
-    print(f"Your updated savings in percentage is {updatedpersal}")
+    print(f"Your updated savings in percentage is {updatedpersavings}")
     print(f"Your updated reamining is {updatedremaining}")
   
   elif outsidesavings == "Yes" and remainingper == 100 and additionalsavings == "Yes":
